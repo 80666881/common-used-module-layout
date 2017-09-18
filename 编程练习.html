@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 移除数组 arr 中的所有值与 item 相等的元素，直接在给定的 arr 数组上进行操作，并将结果返回
+        var arr = [1, 2, 2, 3, 4, 2, 2];
+
+        function removeWithoutCopy(arr, item) {    
+            for (var i = 0; i < arr.length; i++)     {        
+                if (item == arr[i])         {            
+                    arr.splice(i, 1);            
+                    i--;        
+                }    
+            }    
+            return arr;
+        }
+        removeWithoutCopy(arr, 2);
+
+
+        //在数组 arr 末尾添加元素 item。不要直接修改数组 arr，结果返回新的数组
+        var append2 = function (arr, item) {  
+            //slice() 方法返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象。原始数组不会被修改。  
+            var newArr = arr.slice(0);  // slice(start, end)浅拷贝数组
+            newArr.push(item);    
+            return newArr;
+        };
+
+        //写一个函数，生成一个长度为 n 的随机字符串，字符串字符的取值范围包括0到9，a到 z，A到Z。
+        function getRandom(len) {
+            let result = '';
+            const str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            for (var i = 0; i < len; i++) {
+                var index = parseInt(Math.random() * str.length);
+                result += str[index];
+            }
+            return result;
+        }
+
+        //写一个函数，生成一个随机 IP 地址，一个合法的 IP 地址为 0.0.0.0~255.255.255.255
+        function getIp() {
+            var arr = [];
+            for (var i = 0; i < 4; i++) {
+                var ip = parseInt(Math.random() * 256);
+                arr.push(ip);
+            }
+            return arr.join('.');
+        }
+
+        //写一个函数，生成一个随机颜色字符串，合法的颜色为#000000~ #ffffff
+        function getColor() {
+            let arr = ['#'];
+            const str = '0123456789abcdef'
+            for (let i = 0; i < 6; i++) {
+                let index = parseInt(Math.random() * str.length);
+                arr.push(str[index]);
+            }
+            return arr.join('');
+        }
+
+        //写一个函数，操作数组，返回一个新数组，新数组中只包含正数，原数组不变
+        function getPositive(arr){
+            return arr.filter(function(e){
+                return typeof e == 'number' && e>0;
+            })
+        }
+
+        //去除字符串首尾空格
+        function trim(str){
+            return str.replace(/(^\s*)|(\s*$)/g,"")
+        }
+
+        //字符串转驼峰
+        //例：border-bottom-color => borderBottomColor
+        var str1 = 'border-bottom-color';
+        //字符串方法
+        function hump(str){
+            var arr= str.split('-');
+            for(var i=1;i<arr.length;i++){
+               arr[i] =  arr[i].charAt(0).toUpperCase()+arr[i].substring(1);
+            }
+            return arr.join('');
+        }
+        //正则方法
+        function humpReg(str){
+            var reg = /-(\w)/g;
+            //用括号括起来代表正则的子项
+            return str.replace(reg,function($0,$1){//$0:代表正则整体，$1代表子项
+               return $1.toUpperCase();
+            })
+        }
+
+        //查找字符串中出现最多的字符和个数
+        var str2 = 'sdjaskdjlkwq120jjdajowi';
+        //字符串方法
+        function most(str){
+            var obj={}
+            for(var i=0;i<str.length;i++){
+                if(obj[str[i]]){
+                    obj[str[i]]++ ;
+                }else{
+                    obj[str[i]]  = 1;
+                }
+            }
+            var max = 0;
+            var value;
+            for(var key in obj){
+                if(obj[key]>max){
+                    max = obj[key]
+                    value = key;
+                }
+            }
+            console.log('出现最多的字符是'+value+'次数是'+max)
+        }
+        //正则方法
+        function mostReg(str){
+            var arr= str.split('');
+            arr.sort();
+            str = arr.join('');
+            var num= 0;
+            var value =0;
+            var reg = /(\w)\1+/g // \1表示跟第一个子项相同
+            str.replace(reg,function($0,$1){
+                if(num<$0.length){
+                    num = $0.length;
+                    value = $1;
+                }
+            })
+            console.log('出现最多的字符是' + value + '次数是' + num)
+        }
+
+
+        //如何给字符串加千分符
+        //例如:12345678 =>12,345,678
+        var str3 = '12345678'
+        function comma(str3){
+            var arr = str3.split('').reverse();
+            for(var i=0;i<arr.length;i++){
+                if(i %4 ===0){
+                    arr.splice(i,0,',');
+                }
+            }
+            return arr.reverse().join('');
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ct {
+            position: relative;
+            border: 1px solid red;
+        }
+
+        .ct>a {
+            width: 100px;
+            height: 20px;
+            display: inline-block;
+            border: 2px solid grey;
+        }
+
+        .ct>a:hover~ul,ul:hover {
+            display: block;
+        }
+
+        .ct>ul {
+            list-style: none;
+            position: absolute;
+            left: 0;
+            top: 20px;
+            border: 1px solid blue;
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 鼠标实现悬浮下拉菜单  -->
+    <div class="ct">
+        <a href="javascript:void(0)">悬浮下拉</a>
+        <ul>
+            <li>11111</li>
+            <li>222222</li>
+            <li>33333</li>
+            <li>44444</li>
+            <li>55555</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

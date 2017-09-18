@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: red; 
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="div1"></div>
+</body>
+<script>
+    /*      
+        使用到的鼠标方法   
+        onmousedown:选择元素
+        onmousemove:移动元素
+        onmouseup:释放元素 
+    */
+
+    function drag(el) {
+        var target = document.querySelector(el)
+        target.onmousedown = function (ev) {
+            //clientX 相对整个页面最左端，与滚动条无关
+            //pageX 相对当前页面左端，所以会导致拖拽问题
+            var disX = ev.clientX - this.offsetLeft;
+            var disY = ev.clientY - this.offsetTop;
+
+            //快速移动时，div不是立即响应的，因此需要把move事件绑定到document上
+            document.onmousemove = function (ev) {
+                //console.log(ev)    MouseEvent
+                target.style.left = ev.clientX - disX + 'px';
+                target.style.top = ev.clientY - disY + 'px';
+            }
+            document.onmouseup = function () {
+                document.onmousemove = null;
+            }
+        }
+    }
+    drag('#div1')
+</script>
+
+</html>
