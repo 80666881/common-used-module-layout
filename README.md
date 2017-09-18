@@ -4,14 +4,15 @@
 
 ## 布局
 ### 单栏布局
-http://jsbin.com/xamower/edit?html,css,output
+
+[预览地址](http://jsbin.com/xamower/edit?html,css,output)
 ![](media/15055321001835/15055494502786.jpg)
 ### 两栏布局
 >左侧宽度固定，右侧自适应
 
 ![](media/15055321001835/15057201974373.jpg)
 
-http://jsbin.com/qolojey/edit?html,css,output
+[预览地址](http://jsbin.com/qolojey/edit?html,css,output)
 
 ### 三栏布局
 
@@ -21,7 +22,8 @@ http://jsbin.com/qolojey/edit?html,css,output
 
 
 
-http://jsbin.com/kuxoxin/edit?html,css,output
+[预览地址](http://jsbin.com/kuxoxin/edit?html,css,output)
+
 ### 双飞翼布局
 
 > 双飞翼布局，属于main标签在前面的自适应三栏布局，
@@ -30,39 +32,45 @@ http://jsbin.com/kuxoxin/edit?html,css,output
 ![](media/15055321001835/15057203697953.jpg)
 
 
-http://jsbin.com/ragiduh/edit?html,css,output
+[预览地址](http://jsbin.com/ragiduh/edit?html,css,output)
+
 ### 圣杯布局
 
 ![](media/15055321001835/15057211025010.jpg)
 
-http://jsbin.com/ziwimuf/edit?html,css,output
+[预览地址](http://jsbin.com/ziwimuf/edit?html,css,output)
 
 ### 瀑布流布局
 
 ![](media/15055321001835/15057211798307.jpg)
 
 
-[预览地址]()
+[预览地址](https://80666881.github.io/common-used-module-layout/%E7%80%91%E5%B8%83%E6%B5%81.html)
 
 ## 其他UI效果
 
 ### 商品列表
-http://jsbin.com/mehahowike/edit?html,output
+
+[预览地址](http://jsbin.com/mehahowike/edit?html,output)
 ![](media/15055321001835/15055496331935.jpg)
 ### 图片商品列表（可以加载）
-http://jsbin.com/lixopo/edit?html,output
+
+[预览地址](http://jsbin.com/lixopo/edit?html,output)
 ![](media/15055321001835/15055497053339.jpg)
 
 ### 渐变轮播
-http://jsbin.com/weyove/edit?html,output
+
+[预览地址](http://jsbin.com/weyove/edit?html,output)
+
 ![](media/15055321001835/15055498239088.jpg)
 ### 图片懒加载
-http://jsbin.com/fofoqeqoni/1/edit?html,output
+
+[预览地址](http://jsbin.com/fofoqeqoni/1/edit?html,output)
 
 ### tab组件封装
 ![](media/15055321001835/15057208571568.jpg)
 
-[预览地址]()
+[预览地址](https://80666881.github.io/common-used-module-layout/tab%E7%BB%84%E4%BB%B6.html)
 
 ### 拖拽功能
 
@@ -74,9 +82,12 @@ http://jsbin.com/fofoqeqoni/1/edit?html,output
 
 ### loading效果
 ![](media/15055321001835/15057206538189.jpg)
-[预览地址]()
+[预览地址](https://80666881.github.io/common-used-module-layout/%E5%9C%86%E5%BD%A2loading%E6%95%88%E6%9E%9C.html)
+
+---
+
 ![](media/15055321001835/15057206834858.jpg)
-[预览地址]()
+[预览地址](https://80666881.github.io/common-used-module-layout/loading%E6%95%88%E6%9E%9C1.html)
 
 ### 卡片翻转
 #### 重要属性
@@ -97,12 +108,12 @@ transform-style: preserve-3d;
 ```
 ![](media/15055321001835/15057058117775.jpg)
 
-[预览地址]()
+[预览地址](https://80666881.github.io/common-used-module-layout/css3%E5%8D%A1%E7%89%87%E7%BF%BB%E8%BD%AC%E6%95%88%E6%9E%9C.html)
 
 ### 遮罩层效果
 
 ![](media/15055321001835/15057209548753.jpg)
 
-[预览地址]()
+[预览地址](https://80666881.github.io/common-used-module-layout/%E9%81%AE%E7%BD%A9%E6%95%88%E6%9E%9C.html)
 
 
